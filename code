@@ -1,0 +1,33 @@
+#Creating a program to output my initials using Python and being a little more nuanced than just typing out what to print manually
+
+#Setting up rows of characters to represent 'R' and 'G' using https://content.codecademy.com/courses/learn-cpp/hello-world/block-letters-hint.png for reference
+r14 = "RRRR "
+r237 = "R   R"
+r5 = "R R  "
+r6 = "R  R "
+
+g17 = " GGG "
+g256 = "G   G"
+g3 = "G    "
+g4 = "G GGG"
+
+#including spacing as a var to increase or decrease as needed
+spacing = " "
+
+#creating each line to hold contents of both letters and a space between
+line1 = r14 + spacing + g17
+line2 = r237 + spacing + g256
+line3 = r237 + spacing + g3
+line4 = r14 + spacing + g4
+line5 = r5 + spacing + g256
+line6 = r6 + spacing + g256
+line7 = r237 + spacing + g17
+
+#printing the result
+print(line1)
+print(line2)
+print(line3)
+print(line4)
+print(line5)
+print(line6)
+print(line7)
