@@ -1,11 +1,14 @@
+#Opening statement explains the situation
 print("I have information for the following planets:\n")
 
 print("   1. Venus   2. Mars    3. Jupiter")
 print("   4. Saturn  5. Uranus  6. Neptune\n")
  
+#These variables can be changed (or input) to create different results
 weight = 185
 planet = 4
 
+#planets loading!
 pl1 = "Venus"
 pl2 = "Mars"
 pl3 = "Jupiter"
@@ -13,6 +16,7 @@ pl4 = "Saturn"
 pl5 = "Uranus"
 pl6 = "Neptune"
 
+#relative gravity loading!
 rg1 = 0.91
 rg2 = 0.38
 rg3 = 2.34
@@ -20,10 +24,11 @@ rg4 = 1.06
 rg5 = 0.92
 rg6 = 1.19
 
+#message constructors loading!
 msg1 = "Looks like your weight on "
 msg2 = " would be "
 
-# Write an if statement below:
+#IF ELIF ELSE to look at the planet and adjust relative gravity
 if (planet == 1):
   weight = (weight*rg1)
   planet = pl1
@@ -42,4 +47,6 @@ elif (planet == 5):
 else:
   weight = weight * rg6
   planet = pl6
+  
+#print out the results!
 print(msg1 + planet + msg2 + str(weight))
