@@ -1,0 +1,31 @@
+#Quiz time
+
+score = 0
+
+#Setting the question options
+option1 = 'Never gonna say goodbye'
+option2 = 'Never gonna run around and desert you'
+option3 = 'Never gonna cause you big sad times'
+option4 = 'Never gonna give you up'
+option5 = 'Never gonna tell a lie and hurt you'
+option6 = 'Never gonna make you cry'
+option7 = 'Never gonna let you down'
+
+print("Which of the following is NOT something Rick Astley promises to never do?\n")
+
+print("A.", option1)
+print("B.", option2)
+print("C.", option3)
+print("D.", option4)
+print("E.", option5)
+print("F.", option6)
+print("G.", option7)
+
+#Question 1 handling
+answer = 'c'
+
+if answer == 'C' or answer == 'c': 
+  score += 100
+  print("\nCorrect!")
+else:
+  print("\nNope, sorry!")
