@@ -1,0 +1,42 @@
+weight = 3
+cost = 0.0
+
+print("OK let's run down your options: \n")
+#Ground Shipping
+if (weight <= 2):
+  groundcost = (weight*1.5)+20
+elif (weight <= 6):
+  groundcost = (weight*3)+20
+elif (weight <= 10):
+  groundcost = (weight*4)+20
+elif (weight > 10):
+  groundcost = (weight*4.75)+20
+else: groundcost = cost
+
+print("Ground Shipping will run ya "+str(groundcost)+" bucks")
+
+#Ground Shipping Premium
+groundpremcost = 125
+print("Ground Shipping Premium will run ya "+str(groundpremcost)+" bucks")
+
+#Drone Shipping
+if (weight <= 2):
+  dronecost = weight*4.5
+elif (weight <= 6):
+  dronecost = weight*9
+elif (weight <= 10):
+  dronecost = weight*12
+elif (weight > 10):
+  dronecost = weight*14.25
+else: dronecost = cost
+
+print("Drone Shipping will run ya "+str(dronecost)+" bucks\n")
+
+if (groundcost < groundpremcost) and (groundcost < dronecost):
+  print("Welp it looks like Ground Shipping is your best bet and that will set ya back "+str(groundcost)+" buckaroos!")
+elif (groundcost < groundpremcost) and (groundcost > dronecost):
+  print("Wow, my personality has completely changed and it is my duty to report that drone shipping is most efficient and will cost "+str(dronecost)+" dollars.")
+elif (groundpremcost < groundcost) and (groundpremcost < dronecost):
+  print("Daaaaang! This here Ground Premium is a whalloping 125 bucks but that's a steal of a deal in this case I suppose.")
+else: print("What a da heck? That's an error.")
+
