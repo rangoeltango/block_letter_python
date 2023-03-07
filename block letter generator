@@ -1,6 +1,7 @@
 #Creating a program to output my initials using Python and being a little more nuanced than just typing out what to print manually
 
 #Setting up rows of characters to represent 'R' and 'G' using https://content.codecademy.com/courses/learn-cpp/hello-world/block-letters-hint.png for reference
+# NOTE! Several rows were repeating, so they were assigned to the same variable (e.g. r237 means the same pattern existed on rows 2, 3, and 7 so they were grouped)
 r14 = "RRRR "
 r237 = "R   R"
 r5 = "R R  "
