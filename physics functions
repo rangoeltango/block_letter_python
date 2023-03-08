@@ -1,0 +1,43 @@
+#Project to build functions to return useful Physics values
+
+# Function to convert temps in Farenheit to Celsius
+def f_to_c(f_temp):
+  c_temp = ((f_temp-32)*(5/9))
+  return c_temp
+
+f100_in_celsius = f_to_c(100)
+#print(f100_in_celsius)
+
+# Function to convert temps in Celsius to Farenheit
+def c_to_f(c_temp):
+  f_temp = (c_temp)*(9/5)+32
+  return f_temp
+c0_in_farenheit = c_to_f(0)
+#print(c0_in_farenheit)
+
+#Function to calculate a force in Newtons and print it
+def get_force(mass, acceleration):
+  return mass*acceleration
+
+train_mass = 22680
+train_acceleration = 10
+
+train_force=get_force(train_mass,train_acceleration)
+print("The GE train supplies "+str(train_force)+" Newtons of force.")
+
+#Function to calculate the Joules of a bomb using speed of light constant
+def get_energy(mass,c=(3*10**8)):
+  return mass*(c*c)
+
+bomb_mass = 1
+
+bomb_energy = get_energy(bomb_mass)
+print("A "+str(bomb_mass)+"kg bomb supplies "+str(bomb_energy)+" Joules")
+
+#Function to calculate work
+def get_work(mass,acceleration,distance):
+  return get_force(mass, acceleration)*distance
+
+train_distance = 100
+train_work = get_work(train_mass,train_acceleration,train_distance)
+print("The GE train does "+str(train_work)+" Joules of work over "+str(train_distance)+" meters.")
