@@ -1,52 +1,81 @@
+from decimal import Decimal
+
 #Opening statement explains the situation
-print("I have information for the following planets:\n")
+print("I have information for the following celestial bodies:\n")
+print("   1. The Sun   2. Mercury    3. Venus   4. Earth   5. The Moon")
+print("   6. Mars  7. Jupiter  8. Saturn   9. Uranus   10. Neptune   11. Pluto\n")
 
-print("   1. Venus   2. Mars    3. Jupiter")
-print("   4. Saturn  5. Uranus  6. Neptune\n")
- 
-#These variables can be changed (or input) to create different results
-weight = 185
-planet = 4
+#Input prompts that convert input string to integer and save to variables w/ global scope
+planet_choice = int(input('Which planet would you like to know your weight on? (Type number and hit enter)'))
+weight = int(input('What weight (in any unit!) do you want to convert to weight on that planet?'))
 
-#planets loading!
-pl1 = "Venus"
-pl2 = "Mars"
-pl3 = "Jupiter"
-pl4 = "Saturn"
-pl5 = "Uranus"
-pl6 = "Neptune"
+#assigning the planets to their variables
+sun = "The Sun"
+mercury = "Mercury"
+venus = "Venus"
+earth = "Earth"
+moon = "The Moon"
+mars = "Mars"
+jupiter = "Jupiter"
+saturn = "Saturn"
+uranus = "Uranus"
+neptune = "Neptune"
+pluto = "Pluto"
 
-#relative gravity loading!
-rg1 = 0.91
-rg2 = 0.38
-rg3 = 2.34
-rg4 = 1.06
-rg5 = 0.92
-rg6 = 1.19
+#RG for each planet assigned as a decimal - relative gravity is measured in 'g'. 1g = 9.80665 m/2^2, the surface gravitational acceleration on Earth
+rg_sun = Decimal(28.02)
+rg_mercury = Decimal(0.377)
+rg_venus = Decimal(0.905)
+rg_earth = Decimal(1)
+rg_moon = Decimal(0.165)
+rg_mars = Decimal(0.379)
+rg_jupiter = Decimal(2.528)
+rg_saturn = Decimal(1.065)
+rg_uranus = Decimal(0.886)
+rg_neptune = Decimal(1.137)
+rg_pluto = Decimal(0.063)
 
 #message constructors loading!
 msg1 = "Looks like your weight on "
 msg2 = " would be "
+planet = ""
 
-#IF ELIF ELSE to look at the planet and adjust relative gravity
-if (planet == 1):
-  weight = (weight*rg1)
-  planet = pl1
-elif (planet == 2):
-  weight = (weight*rg2)
-  planet = pl2
-elif (planet == 3):
-  weight = (weight*rg3)
-  planet = pl3
-elif (planet == 4):
-  weight = (weight*rg4)
-  planet = pl4
-elif (planet == 5):
-  weight = (weight*rg5)
-  planet = pl5
+#IF ELIF ELSE to look at the planet and adjust relative gravity accordingly (and an error catcher)
+if (planet_choice == 1):
+  weight = (weight*rg_sun)
+  planet = sun
+elif (planet_choice == 2):
+  weight = (weight*rg_mercury)
+  planet = mercury
+elif (planet_choice == 3):
+  weight = (weight*rg_venus)
+  planet = venus
+elif (planet_choice == 4):
+  weight = (weight*rg_earth)
+  planet = earth
+elif (planet_choice == 5):
+  weight = (weight*rg_moon)
+  planet = moon
+elif (planet_choice == 6):
+  weight = (weight*rg_mars)
+  planet = mars
+elif (planet_choice == 7):
+  weight = (weight*rg_jupiter)
+  planet = jupiter
+elif (planet_choice == 8):
+  weight = (weight*rg_saturn)
+  planet = saturn
+elif (planet_choice == 9):
+  weight = (weight*rg_uranus)
+  planet = uranus
+elif (planet_choice == 10):
+  weight = (weight*rg_neptune)
+  planet = neptune
+elif (planet_choice == 11):
+  weight = (weight*rg_pluto)
+  planet = pluto
 else:
-  weight = weight * rg6
-  planet = pl6
+  print("OOPSIES ERROR THROWN!")
   
 #print out the results!
 print(msg1 + planet + msg2 + str(weight))
