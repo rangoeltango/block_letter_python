@@ -18,3 +18,15 @@ health_points += available_items.pop("mystic bread", 0)
 
 print(available_items)
 print(round(health_points))
+
+#Separate example of how to iterate through all items in a list (and not remove them) - could be a way to add up the potential full amount if used
+mana_potions = {"purple drank": 10, "spotted mushroom caps": 20, "thorny plimwillow bush": 30, "grimbling gooblers": 40, "blood of a leper": 50, "eye of newt": 44, "frog legs": 99}
+
+mana = 100*(random.random())
+
+#goes through mana_potions dictionary and for every entry (potion), it will look at the value because of .values()
+#those values will be added to mana
+for potion in mana_potions.values():
+  mana += potion
+  
+print(mana)
