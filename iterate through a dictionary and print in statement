@@ -1,0 +1,5 @@
+fries_in_bucket = {"Burger King": 28, "Wendy's": 90, "MacDonalds": 58, "In N Out": 40, "Eat N Park": 37, "Dennys": 90}
+
+#iterates through dictionary and uses both the key and the value in custom statement
+for joint, numfries in fries_in_bucket.items():
+  print("Theres only "+ str(numfries) + " fries in da bucket at "+ joint+".")
