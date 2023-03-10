@@ -1,0 +1,60 @@
+from datetime import datetime
+
+#using datetime to set a date
+my_day = datetime(1987,12,2)
+
+#you can access the each part of the date with 'my_day.year', 'my_day.month', and 'my_day.day'
+#print(my_day.day)
+
+#you can also check out what the weekday was! 0=Monday, 1=Tuesday, 2=Wednesday, 3=Thursday, 4=Friday, 5=Saturday, 6=Sunday
+# Mapping of the week day
+weekDaysMapping = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+monthsMapping = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+dayOfTheWeek = weekDaysMapping[my_day.weekday()]
+
+subscript_st = "st"
+st_days = [1,21,31]
+
+subscript_nd = "nd"
+nd_days = [2,22]
+
+subscript_rd = "rd"
+rd_days = [3,23]
+
+subscript_th = "th"
+th_days = [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,25,26,27,28,29,30]
+
+#Need to fix this but can attempt to add them later
+#suffixes = {1: "st", 2: "nd", 3: "rd"}
+#def get_suffix(n: int):
+#  if 11 <= n <= 13:
+#    return "th"
+#  return suffixes.get(n % 10, "th")
+#print(suffixes)    
+#print(dayOfTheWeek)
+print('I wasn\'t born yesterday! I was born on a '+str(dayOfTheWeek))
+
+#using datetime.now() which is right now!*** Very useful for stamping stuff
+print("ALARRRRM! IT IS NOW "+str(datetime.now()))
+print("Wow that looks crappy. Let me start again")
+print("ALARRRRM! IT IS NOW "+str.upper(weekDaysMapping[datetime.now().weekday()])+" "+str.upper(monthsMapping[datetime.now().month])+" "+str(datetime.now().day))
+# you can perform math using dates as well, this returns 1 year
+datediff = datetime(2018,1,1) - datetime(2017,1,1)
+#print(datediff)
+
+#DATEDIFF can be combined with datetime.now() to figure out how long something took ...like my age
+mysadage = datetime.now() - datetime(1987, 12,2)
+print("You are exactly "+str(mysadage)+" old as of right now. Of course this is now outdated information. Please start again.")
+
+#check out google doc for datetime format
+#there is a chart of codes for the formatting parameter of strptime used below
+parsed_date = datetime.strptime('Jan 8, 1954','%b %d, %Y')
+print("The parsed date is "+str(parsed_date))
+
+#you can then used the parsed date info like the other inputs above (e.g. Jan = 1)
+parsed_date_sample = weekDaysMapping[parsed_date.weekday()]
+print("That sample parsed date is a "+str(parsed_date_sample))
+
+#using STR F TIME
+date_string = datetime.strftime(datetime.now(),'%b %d, %Y')
+print("The current date is "+str(date_string))
