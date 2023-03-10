@@ -1,0 +1,20 @@
+import random
+
+#This is an example of how you can 'use' an item from a dictionary and do something with it's associated value.
+#Items used to regain health for a character in this case
+#available_items represents a backpack of items they can use and the associated HP gained
+available_items = {"health potion": 10, "cake of the cure": 5, "green elixir": 20, "strength sandwich": 25, "stamina grains": 15, "power stew": 30}
+
+#initializing health
+health_points = 100*(random.random())
+print(health_points)
+
+#Using an item from the pack while also removing it from the previous list
+# the latter end checks if the item specified in argument 1 is within the list, otherwise it returns arugment 2 (e.g. 0)
+# if the specified key (the item name in this case) is found, the corresponding dictionary value (the number values in the dictionary) will be added to the health points
+health_points += available_items.pop("stamina grains", 0)
+health_points += available_items.pop("power stew", 0)
+health_points += available_items.pop("mystic bread", 0)
+
+print(available_items)
+print(round(health_points))
