@@ -1,0 +1,99 @@
+#Tarot card game
+
+import random
+from time import sleep 
+#dictionary of tarot cards and numbers
+tarot = { 1:"The Magician", 2:"The High Priestess", 3:"The Empress", 4:"The Emperor", 5:"The Hierophant", 6:"The Lovers", 7:"The Chariot",\
+          8:"Strength", 9:"The Hermit", 10:"Wheel of Fortune", 11:	"Justice", 12:"The Hanged Man", 13:"Death", 14:"Temperance", 15:"The Devil",\
+              16:"The Tower", 17:"The Star", 18:"The Moon", 19:	"The Sun", 20:	"Judgement", 21:"The World", 22: "The Fool"}
+
+#Welcome message printing
+print("Welcome to Tarotbot, your friend for non-judgemental tarot readings any time!")
+sleep(1.2)
+print("")
+
+#Create the empty table as a dictionary
+spread = {}
+
+#Defining the past elements
+elem_dict = {"A":"Earthen Soil", "B":"Mountain Spring", "C":"Wildfire", "D":"Ocean Gale", "E":"Polar Magnetism"}
+
+#Printing the beginning prompt and request for an ELEMENT
+print("We must start at the beginning my friend... choose which natural element best represents your past.\n")
+sleep(1.2)
+print("A. Earthen Soil   B. Mountain Spring   C. Wildfire   D. Ocean Gale   E. Polar Magnetism \n")
+sleep(1.2)
+past_input = input("Type the letter of your selection and hit enter when you are ready to make your choice!\n")
+#capitalizing the input
+past_input = past_input.upper()
+#using the input letter to retrieve a value from elem_dict
+newvar = elem_dict[past_input]
+sleep(1.2)
+#printing a message includint the selected element from the dictionary
+print("You have selected "+newvar+"... how interesting ...\n")
+sleep(2)
+#Mr Kibbles is annoying us
+print("Mr. Kibbles, get back")
+sleep(1)
+print("Kibbles, GET.   BACK.    MEOW!")
+sleep(1)
+print("Sorry about that, it's my cat Mr. Kibbles. He's precious, but he can be a handful. AHEM.\n")
+sleep(2)
+print("Whoa!? Did you feel that?? The spirits are guiding me to feed Mr. Kibbles some digi-chow before we continue. It must be important.\n")
+sleep(2)
+kibble_input = input("I SAY TO YOU: HOW MANY DIGI FISH SHOULD I FEED MR KIBBLES?\n")
+kibble_input = int(kibble_input)
+if kibble_input == 0:
+  print("Look, it's not always about you! The spirits demand it and Mr. Kibbles is hungry! But you spit in the face of the universe! Fine. Whatever, lets keep going.")
+elif kibble_input <2:
+  print("Wow, OK. Mr. Kibbles thanks you for the generous portion! *sarcastic robo-smirk*")
+elif kibble_input <5:
+  print("A little stingy, but that's OK - we don't want to overfeed the boy I guess ;)")
+elif kibble_input <10:
+  print("That's a nice amount, Mr. Kibbles will be pumped!")
+elif kibble_input <20:
+  print("Hah, OK I think that's getting high but let's roll with it. He will have a little backup fat haha.")
+elif kibble_input <69:
+  print("Getting to be a lot you know! He isn't a black void you know!")
+elif kibble_input == 69:
+  print("Nice.")
+elif kibble_input <100:
+  print("I think you've overdone it and that's all I can say right now.")
+elif kibble_input <1000:
+  print("What is wrong with you?? That's way, way too much!")
+elif kibble_input <10000000:
+  print("You're a monster. You know that right? You want him to frinkin die or somethin?")
+elif kibble_input >= 10000000:
+  print("WTF man?")
+else:
+  print("Kibble error") 
+sleep(2)
+
+#Moving to present phase
+#Printing the present tarot prompt 
+tarot_input = input("Satiating Mr. Kibbles has brought us back to the current moment in time. Choose a tarot card by choosing a number between 1 and 22!\n")
+tarot_input = int(tarot_input)
+tarot_card = tarot[tarot_input]
+sleep(1.2)
+print("Wow, interesting choice! You have selected the "+tarot_card+"!")
+sleep(1.2)
+
+#Moving to future phase
+#Printing the present tarot prompt 
+tarot_input2 = input("Okay, now we're really rushing to finish things, huh? Now you have to select between 1 and 21 since "+tarot_card+" has been removed.\n")
+tarot_input2 = int(tarot_input2)
+tarot_card2 = tarot[tarot_input2]
+sleep(1.2)
+print("Oh, OK! That's... no, it's fine! You have selected the "+tarot_card2+"! It isn't necessarily a bad thing!")
+sleep(1.2)
+print("Anyway I'm outta here I don't know what any of this crap means anyway, BYEEEE!")
+
+
+
+
+#spread["past"] = tarot.pop(13)
+#spread["present"] = tarot.pop(22)
+#spread["future"] = tarot.pop(10)
+
+#for key, value in spread.items():
+#  print("Your "+key+" is the "+value+" card.")
