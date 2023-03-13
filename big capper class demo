@@ -1,0 +1,21 @@
+from time import sleep
+
+print(".------..------..------..------..------.")
+print("|T.--. ||A.--. ||R.--. ||O.--. ||T.--. |")
+print("| :/\\: || (\\/) || :(): || :/\\: || :/\\: |")
+print("| (__) || :\\/: || ()() || :\\/: || (__) |")
+print("| '--'T|| '--'A|| '--'R|| '--'O|| '--'T|")
+print("`------'`------'`------'`------'`------'    by rango")
+
+class BigCapper:
+    def __init__(self, phrase):
+        #Check to make sure the phrase is a string
+        if type(phrase) == str:
+            #and then big cap that!
+            print(phrase.upper())
+
+user_input = input("whatchu wan yell 2 tha world?")
+sleep(1)
+print("well let it be known to the whole world that")
+sleep(1)
+shout1 = BigCapper(user_input)
