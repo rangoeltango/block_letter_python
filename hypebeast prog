@@ -1,0 +1,22 @@
+class Hypebeast:
+  def __init__(self, name, hype):
+    self.name = name
+    self.hype = hype
+    self.ratings = []
+
+  def add_rating(self, rating):
+    if type(rating) is Rating:
+      self.ratings.append(rating)
+
+beanie = Hypebeast("Beanie Todd", 5)
+reggie = Hypebeast("Reggie Watts", 22)
+fluffy = Hypebeast("Fluffy Fluffs", 82)
+
+class Rating:
+  minimum_passing = 50
+  def __init__(self, rating):
+    self.rating = rating
+
+fluffy.add_rating(Rating(100))
+
+print(fluffy.ratings)
