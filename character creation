@@ -1,0 +1,29 @@
+import random
+
+# You can use required instantiation parameters to set certain things at the beginning
+# Like if certain characters had other attributes like strength calculated by passing an hp
+
+class Character:
+  heft = 300
+  def __init__(self, charhp):
+    print("Creating character with health {h}".format(h=charhp))
+    # Add assignment for self.armor here:
+    self.armor = 0.5*charhp
+
+# Using heft to define strength
+  def strength(self):
+    strength = Character.heft / 10
+    return strength
+  
+#This is just assigning intelligence randomly
+  def intelligence(self):
+    intelligence = random.random()*100
+    return intelligence
+
+wendell = Character(120)
+torbalt = Character(360)
+gringly = Character(500)
+
+print(wendell.intelligence())
+print(torbalt.intelligence())
+print(gringly.strength())
