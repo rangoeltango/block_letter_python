@@ -1,0 +1,21 @@
+#Creating a class to create secure website addresses when called 
+
+#This creates the class and instantiates a secure prefix as a variable
+class WebsiteEntry:
+  https_prefix = "https://"
+  def __init__(self, url):
+    self.url = url
+ 
+ 
+  def secure(self):
+    return "{prefix}{site}".format(prefix=self.https_prefix, site=self.url)
+ 
+ 
+espn = WebsiteEntry("www.espn.com")
+github = WebsiteEntry("www.github.com")
+ 
+print(espn.secure())
+# prints "https://www.espn.com"
+ 
+print(github.secure())
+# prints "https://www.github.com"
