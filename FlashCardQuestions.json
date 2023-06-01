@@ -1,5 +1,5 @@
 {
-    "question1": [
+    "question1":
         {
             "topic": "Python",
             "type": "Multiple Choice",
@@ -13,9 +13,8 @@
                     "(D)": "(), immutable"
                 },
             "answer": "D"
-        }
-    ],
-    "question2": [
+        },
+    "question2":
         {
             "topic": "Python",
             "type": "True or False",
@@ -27,9 +26,8 @@
                     "(B)": "False"
                 },
             "answer": "True"
-        }
-    ],
-    "question3": [
+        },
+    "question3":
         {
             "topic": "Python",
             "type": "Fill in the blank",
@@ -38,5 +36,4 @@
             "choices": "x",
             "answer": "Hanzo"
         }
-    ]
 }
