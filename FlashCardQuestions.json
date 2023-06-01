@@ -1,0 +1,42 @@
+{
+    "question1": [
+        {
+            "topic": "Python",
+            "type": "Multiple Choice",
+            "name": "Tuple Declaration",
+            "question": "QUESTION: Tuples are declared with ______ & are ______",
+            "choices":
+                {
+                    "(A)": "[], mutable", 
+                    "(B)": "[], immutable", 
+                    "(C)": "(), mutable", 
+                    "(D)": "(), immutable"
+                },
+            "answer": "D"
+        }
+    ],
+    "question2": [
+        {
+            "topic": "Python",
+            "type": "True or False",
+            "name": "Greatest Artist",
+            "question": "The greatest musician of all time is Enya.",
+            "choices": 
+                {
+                    "(A)": "True", 
+                    "(B)": "False"
+                },
+            "answer": "True"
+        }
+    ],
+    "question3": [
+        {
+            "topic": "Python",
+            "type": "Fill in the blank",
+            "name": "Overwatch Characters",
+            "question": "The best character in Overwatch 2 is: _____",
+            "choices": "x",
+            "answer": "Hanzo"
+        }
+    ]
+}
