@@ -1,0 +1,34 @@
+SAMPLE TRIVIA QUESTIONS N'at
+
+LINES NOT STARTING WITH ('Question:', 'Type:', 'Choices:', or 'Answer:') SHOULD NOT MATTER
+GROUP YOUR QUESTIONS AND THESE 4 REQUIRED LINES TOGETHER (OBVIOUSLY), SAMPLES BELOW FOR SYNTAX
+
+Question: What is the real song name for Enya's Pure Moods hit that included the popular line 'Sail Away, Sail Away, Sail Away'?
+Type: MultipleChoice
+Choices: (a) Caribbean Blue (b) Orinoco Flow (c) Only Time (d) Boadicea
+Answer: (b)
+
+Question: T/F: Enya has recorded multiple albums in 'fictional' languages.
+Type: TrueFalse
+Choices: (a) True (b) False
+Answer: (a)
+
+Question: Enya once lived (or still does??) in a castle next door to what other famous Irish musician?
+Type: Text
+Choices:
+Answer: (Bono)
+
+Question: Which group had the hit single 'She Drives Me Crazy?'
+Type: MultipleChoice
+Choices: (a) Fine Young Cannibals (b) Simple Minds (c) The Human League (d) Mr. Mister
+Answer: (a)
+
+Question: T/F: Marty Robbins is an artist known for his 'old cowpoke mamma jammas'?
+Type: TrueFalse
+Choices: (a) True (b) False
+Answer: (a)
+
+Question: What is the meaning of life?
+Type: Text
+Choices:
+Answer: (42)
